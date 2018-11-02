@@ -5,6 +5,6 @@
 layout: home
 title: Tyler Hayes
 test: yo!
-name: "tylerHayes.svg"
-city: "sanFrancisco.svg"
+tylerHayes: "assets/tylerHayes.png"
+sanFrancisco: "assets/sanFrancisco.png"
 ---

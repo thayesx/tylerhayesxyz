@@ -1,0 +1,28 @@
+---
+---
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  display: flex;
+  width: 600px;
+  height: 600px;
+  background: blanchedalmond;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  img {
+    display: block;
+    max-height: 40px;
+  }
+}
