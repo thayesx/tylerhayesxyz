@@ -1,7 +1,22 @@
 ---
 ---
 
-.container {
+@mixin mask($name, $position) {
+  mask-image: url("../assets/#{$name}");
+  -webkit-mask-image: url("../assets/#{$name}");
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center center;
+  -webkit-mask-position: center center;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  @if $position == "left" {
+    mask-position: left center;
+    -webkit-mask-position: left center;
+  }
+}
+
+.centered {
   width: 100vw;
   height: 100vh;
   display: -webkit-box;
@@ -16,13 +31,13 @@
 .main {
   display: flex;
   width: 600px;
-  height: 600px;
-  background: blanchedalmond;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  img {
-    display: block;
-    max-height: 40px;
+  div.image {
+    height: 40px;
+    width: 100%;
+    background: blanchedalmond;
+    &#name {@include mask("tylerHayes.svg", "left");}
   }
 }
