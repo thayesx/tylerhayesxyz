@@ -18,51 +18,53 @@
   }
 }
 
-@mixin width() {
+@mixin section() {
   width: 600px;
-  margin: 0 auto;
+  margin: 150px auto 0;
 }
 
 .centered {
   width: 100vw;
   height: 100vh;
+  padding: 30vh 0;
+}
+
+.image {
+  background: #111;
+  width: 100%;
 }
 
 .intro {
-  @include width();
-  margin-top: 40vh;
+  @include section();
+  margin-top: 0;
   .image {
-    width: 100%;
-    background: darkgray;
     margin-bottom: 25px;
     &#tylerHayes {
-      height: 45px;
+      height: 40px;
       @include mask("tylerHayes.svg", "center");
     }
     &#city {
-      height: 30px;
+      height: 25px;
       @include mask("sanFrancisco.svg", "center");
     }
     &#insta {
-      height: 30px;
+      height: 25px;
       @include mask("instagram.svg", "center");
     }
   }
 }
 
 .work {
-  @include width();
-  margin-top: 150px;
+  @include section();
   text-align: center;
   .image {
-    background: darkgray;
     margin-bottom: 15px;
     &#workingOn {
-      width: 200px;
+      width: 170px;
       display: inline-block;
       vertical-align: bottom;
       height: 40px;
-      margin-right: 20px;
+      margin-right: 10px;
       @include mask("workingOn.svg", "left");
     }
     &#roof {
@@ -74,10 +76,47 @@
       @include mask("roofLogo.svg", "center");
     }
     &#founder {
-      width: 100%;
-      height: 30px;
+      height: 25px;
       margin-top: 10px;
       @include mask("founder.svg", "center");
+    }
+  }
+}
+
+.contact {
+  @include section();
+  .image {
+    &#messageTitle {
+      height: 20px;
+      @include mask("message.svg", "center");
+    }
+    &#send {
+      height: 40px;
+      @include mask("send.svg", "center");
+    }
+  }
+  .form {
+    position: relative;
+    margin: 10px auto;
+    #box {
+      height: 300px;
+      @include mask("box.svg", "center");
+      pointer-events: none;
+    }
+    textarea {
+      box-sizing: border-box;
+      position: absolute;
+      border: none;
+      outline: none;
+      resize: none;
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      font-family: 'Fira Mono', monospace;
+      margin: 5% 3%;
+      width: 94%;
+      height: 80%;
+      font-size: 20px;
     }
   }
 }

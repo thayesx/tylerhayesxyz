@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{page.title}}</title>
   <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
 </head>
 <body>
   <div class="centered">
@@ -20,10 +21,13 @@
         {% endfor %}
       </div>
     <div class="contact">
-        {% for img in page.contact %}
-          <div class="image" id="{{ img.id }}"></div>
-        {% endfor %}
+      <div class="image" id="messageTitle"></div>
+      <div class="form">
+        <textarea name="message" id="message" cols="30" rows="4"></textarea>
+        <div class="image" id="box"></div>
       </div>
+      <div class="image" id="send"></div>
+    </div>
   </div>
 </body>
 </html>

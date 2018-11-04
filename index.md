@@ -13,9 +13,6 @@ work:
   - id: workingOn
   - id: roof
   - id: founder
-contact:
-  - id: message
-  - id: box
 tylerHayes: "assets/tylerHayes.png"
 sanFrancisco: "assets/sanFrancisco.png"
 ---
