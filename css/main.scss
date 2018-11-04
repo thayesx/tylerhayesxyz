@@ -88,16 +88,12 @@
   .image {
     &#messageTitle {
       height: 20px;
+      margin-bottom: 10px;
       @include mask("message.svg", "center");
     }
-    &#send {
-      height: 40px;
-      @include mask("send.svg", "center");
-    }
   }
-  .form {
+  form {
     position: relative;
-    margin: 10px auto;
     #box {
       height: 300px;
       @include mask("box.svg", "center");
@@ -113,10 +109,18 @@
       -moz-appearance: none;
       -webkit-appearance: none;
       font-family: 'Fira Mono', monospace;
-      margin: 5% 3%;
+      margin: 30px 3%;
       width: 94%;
-      height: 80%;
+      height: 240px;
       font-size: 20px;
+    }
+    #send {
+      display: block;
+      margin: 10px auto 0;
+      width: 100px;
+      height: 40px;
+      cursor: pointer;
+      @include mask("send.svg", "center");
     }
   }
 }
