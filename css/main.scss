@@ -1,6 +1,22 @@
 ---
 ---
 
+// RESPONSIVE BREAKPOINTS
+@mixin breakpoint($point) {
+  // Only desktop
+  @if $point == desktop {
+    @media screen and (min-width: 1024px) {@content;}
+  }
+  // Small tablet / phone
+  @else if $point == s {
+    @media screen and (max-width: 600px) {@content;}
+  } 
+  // Tiny phone
+  @else if $point == xs {
+    @media screen and (max-width: 340px) {@content;}
+  }
+}
+
 @mixin mask($name, $position) {
   mask-image: url("../assets/#{$name}");
   -webkit-mask-image: url("../assets/#{$name}");
@@ -21,6 +37,13 @@
 @mixin section() {
   width: 600px;
   margin: 150px auto 0;
+  @include breakpoint(s) {
+    width: 95%;
+  }
+}
+
+body {
+  margin: 0;
 }
 
 .centered {
@@ -30,6 +53,7 @@
 }
 
 .image {
+  display: block;
   background: #111;
   width: 100%;
 }
@@ -48,8 +72,11 @@
       @include mask("sanFrancisco.svg", "center");
     }
     &#insta {
-      height: 25px;
+      width: 40px;
+      height: 30px;
+      margin: 0 auto;
       @include mask("instagram.svg", "center");
+      &:hover {opacity: .7;}
     }
   }
 }
@@ -74,6 +101,7 @@
       height: 60px;
       background: #ff5a64;
       @include mask("roofLogo.svg", "center");
+      &:hover {opacity: .7;}
     }
     &#founder {
       height: 25px;
@@ -85,6 +113,9 @@
 
 .contact {
   @include section();
+  @include breakpoint(s) {
+    margin-bottom: 50px;
+  }
   .image {
     &#messageTitle {
       height: 20px;
@@ -95,9 +126,12 @@
   form {
     position: relative;
     #box {
+      pointer-events: none;
       height: 300px;
       @include mask("box.svg", "center");
-      pointer-events: none;
+      @include breakpoint(s) {
+        @include mask("box_mobile.svg", "center");
+      }
     }
     textarea {
       box-sizing: border-box;
@@ -113,6 +147,8 @@
       width: 94%;
       height: 240px;
       font-size: 20px;
+      @include breakpoint(s) {font-size: 17px;}
+      @include breakpoint(xs) {margin: 45px 3%; height: 210px;}
     }
     #send {
       display: block;
