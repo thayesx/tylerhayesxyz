@@ -1,33 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{page.title}}</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
+  <script type="text/javascript" src="index.js"></script>
 </head>
+
 <body>
   <div class="centered">
-    <div class="intro">
-        <div class="image" id="tylerHayes"></div>
-        <div class="image" id="city"></div>
-        <a class="image" id="insta" href="https://www.instagram.com/tylerh.yes/" target="_blank"></a>
-    </div>
-    <div class="work">
-        <div class="image" id="workingOn"></div>
-        <a class="image" id="roof" href="https://www.roof.io" target="_blank"></a>
-        <div class="image" id="founder"></div>
+    <div id="intro">
+      <div id="introName">
+        <span class="name">Tyler Hayes</span>
+        <span class="is">is...</span>
       </div>
-    <div class="contact">
-      <div class="image" id="messageTitle"></div>
-      <form name="contact" netlify>
-        <textarea name="message" id="message" cols="30" rows="4"></textarea>
-        <div class="image" id="box"></div>
-        <button type="submit" class="image" id="send"></div>
-      </form>
+      {% for item in page.transitionItems %}
+      <span id="{{ forloop.index }}" class="transitionItem">{{item }}</span>
+      {% endfor %}
+    </div>
+    <div id="workingOn">
+      <h2>Working on:</h2>
+      {% include _roof.html %}
+    </div>
+    <div id="listeningTo">
+      <h2>Listening to:</h2>
+      {% for item in page.listeningToItems %}
+      <div class="bullet">{{ item }}</div>
+      {% endfor %}
+    </div>
+    <div id="reading">
+      <h2>Listening to:</h2>
+      {% for item in page.readingItems %}
+      <div class="bullet">{{ item }}</div>
+      {% endfor %}
+    </div>
+    <div id="excitedAbout">
+      <h2>Excited about:</h2>
+      {% for item in page.excitedAboutItems %}
+      <div class="bullet">{{ item }}</div>
+      {% endfor %}
     </div>
   </div>
+  {% include _contact.html %}
 </body>
+
 </html>

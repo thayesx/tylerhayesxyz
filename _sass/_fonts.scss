@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i');
+
+@mixin fontSize1 {
+  font-size: 14px;
+}
+
+@mixin fontSize2 {
+  font-size: 18px;
+}
+
+@mixin fontSize3 {
+  font-size: 32px;
+}
+
+body, div, p, a {
+  font-family: 'Space Mono', monospace;
+}

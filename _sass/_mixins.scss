@@ -1,0 +1,15 @@
+// RESPONSIVE BREAKPOINTS
+@mixin breakpoint($point) {
+  // Only desktop
+  @if $point == desktop {
+    @media screen and (min-width: 1024px) {@content;}
+  }
+  // Small tablet / phone
+  @else if $point == s {
+    @media screen and (max-width: 600px) {@content;}
+  } 
+  // Tiny phone
+  @else if $point == xs {
+    @media screen and (max-width: 340px) {@content;}
+  }
+}
