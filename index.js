@@ -1,4 +1,4 @@
-let transitionItemsDelay = 1800;
+let transitionItemsDelay = 2800;
 
 let i;
 let transitionItems = [];

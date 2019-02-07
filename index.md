@@ -5,17 +5,19 @@
 layout: home
 title: Tyler Hayes
 transitionItems:
-  - probably making coffee
   - building a Flutter app
+  - really into dark mode
+  - currently in San Francisco
   - eating a La Palma burrito
   - making music
+  - probably making coffee
   - doing some stick & poke and, ehh, getting better
   - bikin' slow-mo
-  - using parables where adjectives would do
-  - picking essential oils
+  - using metaphors where adjectives would do
   - making some leather wallets
   - waxing poetic
-  - putting some Arduino-powered mood lighting in my bedroom
+  - discovering weekly
+  - building some Arduino-powered mood lighting
   - reading a book
   - listening to a book
   - talking about black holes

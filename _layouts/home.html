@@ -14,12 +14,12 @@
 <body>
   <div class="centered">
     <div id="intro">
-      <div id="introName">
+      <div>
         <span class="name">Tyler Hayes</span>
         <span class="is">is...</span>
       </div>
       {% for item in page.transitionItems %}
-      <span id="{{ forloop.index }}" class="transitionItem">{{item }}</span>
+      <span id="{{ forloop.index }}" class="transitionItem fade">{{item }}</span>
       {% endfor %}
     </div>
     <div id="workingOn">
@@ -33,7 +33,7 @@
       {% endfor %}
     </div>
     <div id="reading">
-      <h2>Listening to:</h2>
+      <h2>Reading:</h2>
       {% for item in page.readingItems %}
       <div class="bullet">{{ item }}</div>
       {% endfor %}
