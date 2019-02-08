@@ -29,7 +29,7 @@ body {
   margin: 0;
   color: $light;
   @include fontSize1;
-  max-width: 2000px;
+  max-width: 1800px;
 }
 
 h2 {
@@ -199,41 +199,50 @@ input, textarea, button {
   }
 }
 
-.arrowBar {
+.arrowBox {
   position: fixed;
   top: 0;
-  height: 100vh;
-  width: 100px;
+  height: 100%;
+  width: 100%;
+  max-width: 1800px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
-  &#leftBar {
-    left: 0; 
-  }
-  &#rightBar {
-    right: 0;
-  }
-  @include breakpoint(s) {
-    display: none;
-  }
-  .icon {
-    margin: 20px auto;
-    background: #000;
-    opacity: .12;
-    &.left {
-      left: 10px;
+  pointer-events: none;
+  .arrowBar {
+    pointer-events: all;
+    height: 100%;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &#leftBar {
+      left: 0; 
     }
-    &.right {
-      right: 10px;
+    &#rightBar {
+      right: 0;
     }
-  }
-  &:hover {
+    @include breakpoint(s) {
+      display: none;
+    }
     .icon {
-      opacity: .20;
+      margin: 20px auto;
+      background: #000;
+      opacity: .12;
+      &.left {
+        left: 10px;
+      }
+      &.right {
+        right: 10px;
+      }
     }
-  }
-  &.hide {
-    visibility: hidden;
+    &:hover {
+      .icon {
+        opacity: .20;
+      }
+    }
+    &.hide {
+      visibility: hidden;
+    }
   }
 }
