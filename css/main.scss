@@ -29,6 +29,7 @@ body {
   margin: 0;
   color: $light;
   @include fontSize1;
+  max-width: 2000px;
 }
 
 h2 {
@@ -150,15 +151,9 @@ input, textarea, button {
   }
 }
 
-.noScrollDesktop {
-  @include breakpoint(desktop) {
-    overflow: hidden;
-  }
-}
-
 .gallery {
-  margin: 0;
   background: white;
+  margin: 0;
   text-align: center;
   .galleryBox {
     height: calc(100vh - 100px);
@@ -203,42 +198,41 @@ input, textarea, button {
   }
 }
 
-.arrowBox {
+.arrowBar {
   position: fixed;
   top: 0;
-  left: 0;
   height: 100vh;
-  width: 100vw;
+  width: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+  &#leftBar {
+    left: 0; 
+  }
+  &#rightBar {
+    right: 0;
+  }
   @include breakpoint(s) {
     display: none;
   }
-  .bar {
-    cursor: pointer;
-    height: 100vh;
-    width: 100px;
-    display: flex;
-    align-items: center;
+  .icon {
+    margin: 20px auto;
+    background: #000;
+    opacity: .12;
+    &.left {
+      left: 10px;
+    }
+    &.right {
+      right: 10px;
+    }
+  }
+  &:hover {
     .icon {
-      margin: 20px auto;
-      background: #000;
-      opacity: .12;
-      &.left {
-        left: 10px;
-      }
-      &.right {
-        right: 10px;
-      }
+      opacity: .20;
     }
-    &:hover {
-      .icon {
-        opacity: .20;
-      }
-    }
-    &.hide {
-      visibility: hidden;
-    }
+  }
+  &.hide {
+    visibility: hidden;
   }
 }

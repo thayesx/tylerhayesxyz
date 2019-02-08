@@ -6,11 +6,13 @@ $(document).ready(() => {
   images = $(".galleryBox");
   setImgPointer();
 }).keydown((event) => {
-  if (event.which == 39) {
-    nextPhoto();
-  }
-  if (event.which == 37) {
+  if (event.which == 38 || event.which == 37) {
     prevPhoto();
+    event.preventDefault();
+  }
+  if (event.which == 40 || event.which == 39) {
+    nextPhoto();
+    event.preventDefault();
   }
 }).scroll(() => {
   if (canSetImgPointer) 
@@ -24,7 +26,7 @@ function setImgPointer() {
     let imgTopDistance = img
     .getBoundingClientRect()
     .top;
-    if (imgTopDistance < 800 && imgTopDistance >= 0) {
+    if (imgTopDistance < 100 && imgTopDistance > -800) {
       imgPointer = i;
     }
   }
