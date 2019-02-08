@@ -83,8 +83,8 @@ sections:
           url: https://www.amazon.com/Zen-Art-Motorcycle-Maintenance-Inquiry/dp/0060589469
         - "by Robert Pirsig"
 links:
-  - icon: github
-    url: https://github.com/thayesx
   - icon: instagram
     url: https://www.instagram.com/tylerh.yes/?hl=en
+  - icon: github
+    url: https://github.com/thayesx
 ---
