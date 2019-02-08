@@ -48,7 +48,7 @@ sections:
       - parts:
         - This live dj
         - linkText: wizardry
-          url: https://www.youtube.com/watch?v=QHDRRxKlimY&t=5591s
+          url: https://www.youtube.com/watch?v=bk6Xst6euQk
         - by Solomun
       - parts:
         - This 
