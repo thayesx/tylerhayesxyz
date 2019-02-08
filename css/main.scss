@@ -5,6 +5,7 @@
 @import "../_sass/colors";
 @import "../_sass/fonts";
 @import "../_sass/animation";
+@import "../_sass/icons";
 
 @mixin mask($name, $position) {
   mask-image: url("../assets/#{$name}");
@@ -27,21 +28,36 @@ body {
   background: $dark;
   margin: 0;
   color: $light;
-}
-
-h1 {
-  @include fontSize3;
+  @include fontSize1;
 }
 
 h2 {
   @include fontSize2;
+  margin-bottom: 10px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+a {
   color: $accent;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  &:hover {
+    border-color: $accent;
+  }
+}
+
+input, textarea, button {
+  @include fontSize1;
 }
 
 .centered {
-  padding: 80px 0;
+  padding: 80px 10px 20px;
   max-width: 700px;
   margin: 0 auto;
+  @include breakpoint(s) {
+    padding-top: 40px;
+  }
 }
 
 #intro {
@@ -51,12 +67,84 @@ h2 {
     font-size: inherit;
   }
   .is {
-    color: $accent;
     font-style: italic;
   }
   .transitionItem {
+    color: $accent;
     display: none;
     &.show {display: inline-block};
   }
-  height: 200px;
+  height: 180px;
+  @include breakpoint(s) {
+    height: 160px;
+  }
+}
+
+.section {
+  margin-bottom: 100px;
+  li {
+    padding-left: 20px;
+    margin-bottom: 10px;
+    list-style-type: none;
+  }
+  @include breakpoint(s) {
+    margin-bottom: 80px;
+    li {margin-bottom: 15px; padding-left: 0;}
+  }
+}
+
+.contact {
+  margin-bottom: 80px;
+  .hidden {height: 0; visibility: hidden;}
+  textarea {
+    &::placeholder {
+      color: $light;
+      opacity: .5;
+    }
+    outline: none; 
+    background: transparent; 
+    border: 1px solid $light; 
+    width: calc(100% - 20px);
+    min-height: 100px;
+    padding: 10px;
+    margin: 10px 0;
+    color: $light;
+  }
+  button {
+    right: 0;
+    cursor: pointer;
+    @include fontSize2;
+    padding: 0;
+    background: transparent;
+    color: $accent;
+    outline: none;
+    border: none;
+  }
+}
+
+.lastUpdated {
+  text-align: center;
+  @include fontSize0;
+  margin: 40px 0;
+  color: $accentFaded;
+}
+
+.links {
+  width: 100%;
+  text-align: center;
+  .social_icon {
+    cursor: pointer;
+    padding: 5px;
+    display: inline-block;
+    @include fontSize0;
+    list-style-type: none;
+    .icon {
+      background: $accentFaded;
+    }
+    &:hover {
+      .icon {
+        background: $accent;
+      }
+    }
+  }
 }

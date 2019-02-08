@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{page.title}}</title>
+  <title>{{ page.title }}</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <script type="text/javascript" src="index.js"></script>
@@ -22,30 +22,13 @@
       <span id="{{ forloop.index }}" class="transitionItem fade">{{item }}</span>
       {% endfor %}
     </div>
-    <div id="workingOn">
-      <h2>Working on:</h2>
-      {% include _roof.html %}
-    </div>
-    <div id="listeningTo">
-      <h2>Listening to:</h2>
-      {% for item in page.listeningToItems %}
-      <div class="bullet">{{ item }}</div>
-      {% endfor %}
-    </div>
-    <div id="reading">
-      <h2>Reading:</h2>
-      {% for item in page.readingItems %}
-      <div class="bullet">{{ item }}</div>
-      {% endfor %}
-    </div>
-    <div id="excitedAbout">
-      <h2>Excited about:</h2>
-      {% for item in page.excitedAboutItems %}
-      <div class="bullet">{{ item }}</div>
-      {% endfor %}
-    </div>
+    {% for section in page.sections %}
+      {% include section.html %}
+    {% endfor %}
+    {% include contact.html %}
+    <div class="lastUpdated">brewed {{ site.lastUpdated }}</div>
+    {% include links.html %}
   </div>
-  {% include _contact.html %}
 </body>
 
 </html>

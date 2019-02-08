@@ -1,17 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i');
 
+@mixin fontSize0 {
+  font-size: 15px;
+}
+
 @mixin fontSize1 {
-  font-size: 21px;
+  font-size: 18px;
 }
 
 @mixin fontSize2 {
-  font-size: 24px;
+  font-size: 22px;
 }
 
 @mixin fontSize3 {
   font-size: 32px;
+  @include breakpoint(s) {
+    font-size: 27px;
+  }
 }
 
-body, div, p, a {
+body, div, p, a, input, textarea, button {
   font-family: 'Space Mono', monospace;
 }

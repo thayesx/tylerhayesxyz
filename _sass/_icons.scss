@@ -1,0 +1,14 @@
+.icon {
+  background: $accent;
+  width: 25px;
+  height: 25px;
+  -webkit-mask-size: contain;
+  &.github {
+    -webkit-mask-image: url("../assets/instagram_logo.svg");
+    mask-image: url("../assets/instagram_logo.svg");
+  }
+  &.instagram {
+    -webkit-mask-image: url("../assets/github_logo.svg");
+    mask-image: url("../assets/github_logo.svg");
+  }
+}

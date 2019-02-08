@@ -1,0 +1,9 @@
+<div class="links">
+  {% for link in page.links %}
+  <div class="social_icon">
+    <a href="{{ link.url }}">
+      <div class="icon {{ link.icon }}"></div>
+    </a>
+  </div>
+  {% endfor %}
+</div>
