@@ -1,26 +1,26 @@
 let photos = [];
 let currentPhoto = 0;
 let canUpdateCurrentPhoto = true;
-// if (window.location.pathname) currentPhoto = window
 
 $(document).ready(() => {
   images = $(".galleryBox");
   setCurrentPhoto();
 }).keydown((event) => {
-  console.log("current", currentPhoto);
   if (event.which == 39) {
     nextPhoto();
   }
   if (event.which == 37) {
     prevPhoto();
   }
-}).scroll((event) => {
+}).scroll(() => {
   if (canUpdateCurrentPhoto) 
     setCurrentPhoto();
   }
 )
 
 function setCurrentPhoto() {
+  if (!images) 
+    return;
   for (let i = 0; i < images.length; i++) {
     let img = images[i];
     let imgTopDistance = img
@@ -33,6 +33,8 @@ function setCurrentPhoto() {
 }
 
 function nextPhoto() {
+  if (!images) 
+    return;
   canUpdateCurrentPhoto = false;
   setTimeout(() => {
     canUpdateCurrentPhoto = true;
@@ -46,6 +48,8 @@ function nextPhoto() {
 }
 
 function prevPhoto() {
+  if (!images) 
+    return;
   canUpdateCurrentPhoto = false;
   setTimeout(() => {
     canUpdateCurrentPhoto = true;
