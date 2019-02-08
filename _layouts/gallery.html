@@ -20,7 +20,7 @@
   </script>
 </head>
 
-<body>
+<body class="noScrollDesktop">
   <div class="gallery">
     <div class="galleryBox text">
       <h2>by <a href="{{ site.url }}">Tyler Hayes</a></h2>
@@ -32,6 +32,14 @@
     {% endfor %}
     <div class="galleryBox text">
       <h2>That's all</h2>
+    </div>
+  </div>
+  <div class="arrowBox">
+    <div class="bar" id="leftBar" onclick="prevPhoto()">
+      <div class="icon left"></div>
+    </div>
+    <div class="bar" id="rightBar" onclick="nextPhoto()">
+      <div class="icon right"></div>
     </div>
   </div>
 </body>

@@ -1,10 +1,10 @@
-let photos = [];
-let currentPhoto = 0;
-let canUpdateCurrentPhoto = true;
+let images = [];
+let imgPointer = 0;
+let canSetImgPointer = true;
 
 $(document).ready(() => {
   images = $(".galleryBox");
-  setCurrentPhoto();
+  setImgPointer();
 }).keydown((event) => {
   if (event.which == 39) {
     nextPhoto();
@@ -13,51 +13,67 @@ $(document).ready(() => {
     prevPhoto();
   }
 }).scroll(() => {
-  if (canUpdateCurrentPhoto) 
-    setCurrentPhoto();
+  if (canSetImgPointer) 
+    setImgPointer();
   }
 )
 
-function setCurrentPhoto() {
-  if (!images) 
-    return;
+function setImgPointer() {
   for (let i = 0; i < images.length; i++) {
     let img = images[i];
     let imgTopDistance = img
-      .getBoundingClientRect()
-      .top;
-    if (imgTopDistance < 100 && imgTopDistance > 0) {
-      currentPhoto = i;
+    .getBoundingClientRect()
+    .top;
+    if (imgTopDistance < 800 && imgTopDistance >= 0) {
+      imgPointer = i;
     }
+  }
+  isFirstOrLast();
+}
+
+function isFirstOrLast() {
+  let leftBar = $("#leftBar");
+  let rightBar = $("#rightBar");
+  if (imgPointer == 0) {
+    if (!leftBar.hasClass("hide"))
+      leftBar.addClass("hide");
+  }
+  else if (imgPointer == images.length - 1) {
+    if (!rightBar.hasClass("hide"))
+      rightBar.addClass("hide");
+  }
+  else {
+    if (leftBar.hasClass("hide"))
+      leftBar.removeClass("hide");
+    if (rightBar.hasClass("hide"))
+      rightBar.removeClass("hide");
   }
 }
 
 function nextPhoto() {
-  if (!images) 
-    return;
-  canUpdateCurrentPhoto = false;
+  canSetImgPointer = false;
   setTimeout(() => {
-    canUpdateCurrentPhoto = true;
+    canSetImgPointer = true;
   }, 100);
-  if (currentPhoto < images.length - 1) {
-    currentPhoto++;
-    if ($(images[currentPhoto]).hasClass("half")) 
-      currentPhoto++;
-    images[currentPhoto].scrollIntoView();
+  if (imgPointer < images.length - 1) {
+    imgPointer++;
+    if ($(images[imgPointer]).hasClass("half")) 
+      imgPointer++;
+    images[imgPointer].scrollIntoView();
   }
+  isFirstOrLast();
 }
 
 function prevPhoto() {
-  if (!images) 
-    return;
-  canUpdateCurrentPhoto = false;
+  canSetImgPointer = false;
   setTimeout(() => {
-    canUpdateCurrentPhoto = true;
+    canSetImgPointer = true;
   }, 100);
-  if (currentPhoto > 0) {
-    currentPhoto--;
-    if ($(images[currentPhoto]).hasClass("half")) 
-      currentPhoto--;
-    images[currentPhoto].scrollIntoView();
+  if (imgPointer > 0) {
+    imgPointer--;
+    if ($(images[imgPointer]).hasClass("half")) 
+      imgPointer--;
+    images[imgPointer].scrollIntoView();
   }
+  isFirstOrLast();
 }

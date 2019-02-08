@@ -11,4 +11,12 @@
     -webkit-mask-image: url("../assets/github_logo.svg");
     mask-image: url("../assets/github_logo.svg");
   }
+  &.left {
+    -webkit-mask-image: url("../assets/left.svg");
+    mask-image: url("../assets/left.svg");
+  }
+  &.right {
+    -webkit-mask-image: url("../assets/right.svg");
+    mask-image: url("../assets/right.svg");
+  }
 }
