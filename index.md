@@ -78,6 +78,10 @@ sections:
         - linkText: Snowcrash
           url: https://www.nealstephenson.com/snow-crash.html
         - "by Neal Stephenson. A bizarre, futuristic science fiction novel set in a digital metaverse, featuring super hacker and master swordsman, Hiro Protagonist."
+      - parts:
+        - linkText: Zen & the Art of Motorcycle Maintenance
+          url: https://www.amazon.com/Zen-Art-Motorcycle-Maintenance-Inquiry/dp/0060589469
+        - "by Robert Pirsig"
 links:
   - icon: github
     url: https://github.com/thayesx
