@@ -155,12 +155,20 @@ input, textarea, button {
   background: white;
   text-align: center;
   .galleryBox {
-    height: 100vh;
+    height: calc(100vh - 100px);
     padding: 50px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     position: relative;
+    @include breakpoint(s) {
+      height: 50vh;
+      padding: 10px;
+      &.half {
+        height: 60vh;
+      }
+    }
     &.half {
       @include breakpoint(desktop) {
         display: inline-flex;
@@ -176,9 +184,11 @@ input, textarea, button {
       width: 100%;
       object-fit: contain;
       object-position: center;
+      @include breakpoint(s) {
+        height: 100%;
+      }
     }
     &.text {
-      flex-direction: column;
       height: 60vh;
       a {
         border: none;
