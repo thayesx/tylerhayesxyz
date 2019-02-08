@@ -22,8 +22,12 @@ url: "http://tylerhayes.xyz" # the base hostname & protocol for your site, e.g. 
 
 # Build settings
 markdown: kramdown
-plugins:
-  # - jekyll-feed
+
+defaults:
+  - scope:
+      path: "assets/gallery"
+    values:
+      image: true
 
 sass:
   sass_dir: _sass

@@ -59,6 +59,12 @@ sections:
         - This salaciously good new
         - linkText: James Blake
           url: https://open.spotify.com/album/1LJE8ppunlaafUQzNJsxl2?si=I8_2DoUnQza9cACrKKlX7A
+  - name: casually adding to
+    lines:
+      - parts:
+        - This photo
+        - linkText: gallery
+          url: "https://tylerhayes.xyz/photography"
   - name: reading
     lines:
       - parts:

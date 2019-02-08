@@ -149,3 +149,40 @@ input, textarea, button {
     }
   }
 }
+
+.gallery {
+  margin: 0;
+  background: white;
+  text-align: center;
+  .galleryBox {
+    height: 100vh;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    &.half {
+      @include breakpoint(desktop) {
+        display: inline-flex;
+        width: calc(50% - 50px);
+        padding: 50px 0;
+      }
+    }
+    img {
+      display: inline-block;
+      max-width: 1400px;
+      max-height: 1000px;
+      height: calc(100% - 100px);
+      width: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+    &.text {
+      flex-direction: column;
+      height: 60vh;
+      a {
+        border: none;
+      }
+    }
+  }
+}
