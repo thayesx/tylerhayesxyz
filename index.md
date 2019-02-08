@@ -27,7 +27,7 @@ sections:
         - an app that makes communication and transactions between landlords, tenants, and roommates simple. Currently, using
         - linkText: Flutter
           url: https://medium.com/flutter-io/hummingbird-building-flutter-for-the-web-e687c2a023a8
-        - to build new native iOS and Android apps.
+        - to rebuild our iOS and Android apps.
   - name: "excited about"
     lines:
       - parts:
