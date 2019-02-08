@@ -103,7 +103,8 @@ input, textarea, button {
     }
     outline: none; 
     background: transparent; 
-    border: 1px solid $light; 
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 4px;
     width: calc(100% - 20px);
     min-height: 100px;
     padding: 10px;
