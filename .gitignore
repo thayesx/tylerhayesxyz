@@ -1,4 +1,4 @@
 _site
-scripts
+scripts/dist
 .sass-cache
 .jekyll-metadata

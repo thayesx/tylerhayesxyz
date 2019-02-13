@@ -7,7 +7,7 @@
   {% if jekyll.environment == 'production' %}
   <script type="text/javascript" src="scripts/index.min.js"></script>
   {% else %}
-  <script type="text/javascript" src="scripts/index.js"></script>
+  <script type="text/javascript" src="scripts/src/index.js"></script>
   {% endif %}
 </head>
 
@@ -19,7 +19,7 @@
         <span class="is">is...</span>
       </div>
       {% for item in page.transitionItems %}
-      <span id="{{ forloop.index }}" class="transitionItem fade">{{item }}</span>
+      <span class="transitionItem fade">{{item }}</span>
       {% endfor %}
     </div>
     {% for section in page.sections %}

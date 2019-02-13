@@ -9,34 +9,28 @@ $(document).ready(() => {
 })
 
 function startTransitionItems() {
-  i = Math.floor((Math.random() * 100)) % (transitionItems.length - 1);
-  show(transitionItems[i]);
+  i = Math.floor((Math.random() * 100)) % transitionItems.length;
+  let firstTransitionItem = transitionItems[i];
+  show(firstTransitionItem);
   i++;
 }
 
 function animateLoop() {
   setTimeout(() => {
-    showNextItem(i);
-    if (i < transitionItems.length - 1) 
-      i++;
-    else 
-      i = 0;
+    showNextItem();
     animateLoop(transitionItems);
   }, transitionItemsDelay)
 }
 
-function showNextItem(i) {
-  let prevItem = i == 0
-    ? transitionItems[transitionItems.length - 1]
-    : transitionItems[i - 1];
-  let thisItem = transitionItems[i];
-
+function showNextItem() {
+  let prevItem = transitionItems[(i - 1) % transitionItems.length];
+  let thisItem = transitionItems[i % transitionItems.length];
   hide(prevItem);
   show(thisItem);
+  i++;
 }
 
 function show(obj) {
-  console.log("show", obj);
   let thisObj = $(obj);
   if (!thisObj.hasClass("show")) {
     thisObj.addClass("show");
