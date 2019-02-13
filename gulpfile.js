@@ -32,7 +32,7 @@ gulp.task('jekyll-build-prod', done => {
   let productionEnv = process.env;
   productionEnv.JEKYLL_ENV = 'production';
   
-  return child.spawn('jekyll', ['build', '--config _config_prod.yml'], {
+  return child.spawn('jekyll', ['build', '--config', '_config_prod.yml'], {
     stdio: 'inherit',
     env: productionEnv,
   }).on('close', done);
