@@ -2,7 +2,6 @@ const gulp = require('gulp');
 const minify = require('gulp-minify');
 const filter = require('gulp-filter');
 const child = require('child_process');
-const browserSync = require('browser-sync');
 const gutil = require('gulp-util');
 const del = require('del');
 
@@ -58,8 +57,6 @@ gulp.task('jekyll-serve', done => {
 });
 
 gulp.task('jekyll-build-prod', done => {
-  // browserSync.notify(messages.jekyllBuild);
-
   let productionEnv = process.env;
   productionEnv.JEKYLL_ENV = 'production';
 
