@@ -58,7 +58,7 @@ gulp.task('jekyll-serve', done => {
 });
 
 gulp.task('jekyll-build-prod', done => {
-  browserSync.notify(messages.jekyllBuild);
+  // browserSync.notify(messages.jekyllBuild);
 
   let productionEnv = process.env;
   productionEnv.JEKYLL_ENV = 'production';
