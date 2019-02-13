@@ -1,1 +1,3 @@
-Personal website for Tyler Hayes
+### Personal website for Tyler Hayes
+
+Built with Jekyll
