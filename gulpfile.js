@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const minify = require('gulp-minify');
 const filter = require('gulp-filter');
 const child = require('child_process');
+const browserSync = require('browser-sync');
 const gutil = require('gulp-util');
 const del = require('del');
 
