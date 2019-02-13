@@ -3,7 +3,11 @@
 
 <head>
   {% include head.html %}
-  <script type="text/javascript" src="gallery.js"></script>
+  {% if jekyll.environment == 'production' %}
+  <script type="text/javascript" src="scripts/gallery.min.js"></script>
+  {% else %}
+  <script type="text/javascript" src="scripts/gallery.js"></script>
+  {% endif %}
 </head>
 
 <body class="gallery">

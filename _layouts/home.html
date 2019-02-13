@@ -4,10 +4,15 @@
 <head>
   {% include head.html %}
   <link rel="stylesheet" type="text/css" href="css/main.css">
-  <script type="text/javascript" src="index.js"></script>
+  {% if jekyll.environment == 'production' %}
+  <script type="text/javascript" src="scripts/index.min.js"></script>
+  {% else %}
+  <script type="text/javascript" src="scripts/index.js"></script>
+  {% endif %}
 </head>
 
 <body>
+  {{ jekyll.environment }}
   <div class="centered">
     <div id="intro">
       <div>
@@ -19,7 +24,7 @@
       {% endfor %}
     </div>
     {% for section in page.sections %}
-      {% include section.html %}
+    {% include section.html %}
     {% endfor %}
     {% include contact.html %}
     <div class="lastUpdated">brewed {{ site.lastUpdated }}</div>
