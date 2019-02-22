@@ -2,10 +2,21 @@ let transitionItemsDelay = 2800;
 let i;
 let transitionItems = [];
 
+let messageBox;
+let sendButton;
+
 $(document).ready(() => {
   transitionItems = $(".transitionItem");
   startTransitionItems();
   animateLoop();
+
+  messageBox = $("#msgBox");
+  sendButton = $("#send");
+  messageBox.on("change keyup paste", (e) => {
+    sendButton.attr("class", e.target.value.length > 0
+      ? "ready"
+      : "");
+  })
 })
 
 function startTransitionItems() {
@@ -42,4 +53,10 @@ function hide(obj) {
   if (thisObj.hasClass("show")) {
     thisObj.removeClass("show");
   }
+}
+
+function sendIsReady(ready) {
+  sendButton.attr("class", ready
+    ? "ready"
+    : "");
 }
