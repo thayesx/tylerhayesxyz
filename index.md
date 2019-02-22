@@ -5,6 +5,7 @@ transitionItems:
   - really into dark mode
   - currently in San Francisco
   - eating a La Palma burrito
+  - bouldering
   - making music
   - probably making coffee
   - getting better at stick & poke
@@ -59,12 +60,15 @@ sections:
         - This salaciously good new
         - linkText: James Blake
           url: https://open.spotify.com/album/1LJE8ppunlaafUQzNJsxl2?si=I8_2DoUnQza9cACrKKlX7A
-  - name: casually adding to
+  - name: proud of making
     lines:
       - parts:
-        - This photo
-        - linkText: gallery
+        - This occasionally-growing
+        - linkText: photo gallery
           url: "https://tylerhayes.xyz/photography"
+        - The website for art & film group,
+        - linkText: Pallidocs
+          url: "https://pallidocs.com"
   - name: reading
     lines:
       - parts:
