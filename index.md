@@ -66,6 +66,7 @@ sections:
         - This occasionally-growing
         - linkText: photo gallery
           url: "https://tylerhayes.xyz/photography"
+      - parts:
         - The website for art & film group,
         - linkText: Pallidocs
           url: "https://pallidocs.com"
