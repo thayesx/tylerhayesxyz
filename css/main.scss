@@ -114,15 +114,17 @@ input, textarea, button {
   }
   button {
     right: 0;
-    cursor: pointer;
     @include fontSize2;
     padding: 0;
     background: transparent;
     color: rgba(255,255,255,.3);
     outline: none;
     border: none;
+    pointer-events: none;
     &.ready {
       color: $accent;
+      pointer-events: all;
+      cursor: pointer;
     }
   }
 }
