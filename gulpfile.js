@@ -5,6 +5,8 @@ const child = require('child_process');
 const gutil = require('gulp-util');
 const del = require('del');
 
+const {series} = require('gulp');
+
 const paths = {
   scripts: {
     src: 'scripts/src/*',
@@ -12,29 +14,28 @@ const paths = {
   }
 };
 
-gulp.task('clean-scripts', done => {
+gulp.task('cleanScripts', done => {
   del([paths.scripts.dest + "*.js"])
-
   done();
 });
 
-gulp.task('format-scripts', done => {
+gulp.task('formatScripts', done => {
   gulp
     .src(paths.scripts.src, {allowEmpty: true})
     .pipe(minify({ext: ".min.js"}))
     .pipe(filter("**/*.min.js"))
     .pipe(gulp.dest(paths.scripts.dest));
-
   done();
 });
 
-gulp.task('jekyll-build-prod', done => {
+gulp.task('jekyllBuildProd', done => {
   let productionEnv = process.env;
   productionEnv.JEKYLL_ENV = 'production';
-  
-  return child.spawn('jekyll', ['build', '--config', '_config_prod.yml'], {
+  return child.spawn('jekyll', [
+    'build', '--config', '_config_prod.yml'
+  ], {
     stdio: 'inherit',
-    env: productionEnv,
+    env: productionEnv
   }).on('close', done);
 });
 
@@ -58,5 +59,6 @@ gulp.task('serve', done => {
   done();
 });
 
-gulp.task('default', gulp.series('clean-scripts', 'format-scripts'));
-gulp.task('build-prod', gulp.series('default', 'jekyll-build-prod'));
+exports.default = series('cleanScripts', 'formatScripts');
+exports.build = series('cleanScripts', 'formatScripts', 'jekyllBuildProd');
+exports.serve = 'serve';
