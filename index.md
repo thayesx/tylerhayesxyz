@@ -24,11 +24,16 @@ sections:
       - parts:
         - Building
         - linkText: Roof,
-          url: www.roof.io
-        - an app that makes communication and transactions between landlords, tenants, and roommates simple. Currently, using
+          url: https://www.roof.io
+        - an app that makes communication and transactions between roommates, tenants and landlords easy. Currently using
         - linkText: Flutter
           url: https://medium.com/flutter-io/hummingbird-building-flutter-for-the-web-e687c2a023a8
         - to rebuild our iOS and Android apps.
+      - parts:
+        - Prototyping new interfaces for
+        - linkText: Castle's
+          url: https://www.castle.io
+        - exceptional web dashboard, using Angular 7. Lots of interactive data visualization.
   - name: "excited about"
     lines:
       - parts:
@@ -47,8 +52,8 @@ sections:
   - name: listening to
     lines:
       - parts:
-        - This live dj
-        - linkText: wizardry
+        - This
+        - linkText: live dj wizardry
           url: https://www.youtube.com/watch?v=bk6Xst6euQk
         - by Solomun
       - parts:
@@ -92,5 +97,5 @@ links:
     url: https://www.instagram.com/tylerh.yes/?hl=en
   - icon: github
     url: https://github.com/thayesx
-lastUpdated: "02/23/19"
+lastUpdated: "03/27/19"
 ---
