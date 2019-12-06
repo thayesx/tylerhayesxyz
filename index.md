@@ -5,13 +5,15 @@ transitionItems:
   - really into dark mode
   - currently in San Francisco
   - eating a La Palma burrito
-  - bouldering
+  - healing a broken hand
+  - appreciating the hell out of modern medicine
+  - trying to rock climb again
   - making music
   - probably making coffee
-  - getting better at stick & poke
   - bikin' slow-mo
   - using metaphors when adjectives would do
   - making some leather wallets
+  - thinking about capitalism
   - waxing poetic
   - discovering weekly
   - building some Arduino mood lighting
@@ -37,65 +39,55 @@ sections:
   - name: "excited about"
     lines:
       - parts:
-        - The winning lineup at
-        - linkText: Form
-          url: https://www.experienceform.com/
-        - this year.
+        - The slow and steady evolution of
+        - linkText: Flutter for Web.
+          url: https://flutter.dev/web
       - parts:
-        - The upcoming release of
-        - linkText: Hummingbird,
-          url: https://medium.com/flutter-io/hummingbird-building-flutter-for-the-web-e687c2a023a8
-        - web platform for the astonishingly, poetically good
-        - linkText: Flutter
-          url: https://medium.com/flutter-io/hummingbird-building-flutter-for-the-web-e687c2a023a8
-        - framework.
+        - San Francisco's
+        - linkText: Market street is banning cars.
+          url: https://sfbike.org/market-street-2020/
+        - A neat experiment in reformed urban infrastructure.
+      - parts:
+        - linkText: Angular Ivy,
+          url: https://blog.angular.io/a-plan-for-version-8-0-and-ivy-b3318dfc19f7
+        - an improvement on the viewEngine compiler.
   - name: listening to
     lines:
       - parts:
         - This
-        - linkText: live dj wizardry
-          url: https://www.youtube.com/watch?v=bk6Xst6euQk
-        - by Solomun
+        - linkText: piano magic
+          url: https://www.youtube.com/watch?v=QTACugN67yc
+        - by FKJ.
       - parts:
-        - This 
-        - linkText: journey
-          url: https://open.spotify.com/user/thayesx/playlist/6l1avMQQIgFahYYQWZnowO?si=_Ebvlib3Q5OBWfWNiugd_w
-        - of emotional indulgence
-      - parts:
-        - This salaciously good new
+        - This salaciously good
         - linkText: James Blake
           url: https://open.spotify.com/album/1LJE8ppunlaafUQzNJsxl2?si=I8_2DoUnQza9cACrKKlX7A
-  - name: proud of making
-    lines:
-      - parts:
-        - This occasionally-growing
-        - linkText: photo gallery
-          url: "https://tylerhayes.xyz/photography"
-      - parts:
-        - The website for art & film group,
-        - linkText: Pallidocs
-          url: "https://pallidocs.com"
+        - contender for 2019 album of the year.
+  # - name: proud of making
+  #   lines:
+  #     - parts:
+  #       - This occasionally-growing
+  #       - linkText: photo gallery
+  #         url: "https://tylerhayes.xyz/photography"
+  #     - parts:
+  #       - The website for art & film group,
+  #       - linkText: Pallidocs
+  #         url: "https://pallidocs.com"
   - name: reading
     lines:
       - parts:
-        - linkText: The Technological Singularity
-          url: https://mitpress.mit.edu/books/technological-singularity
-        - "by Murray Shanahan. A delightful peek into the future of AI and brain emulation. Also part of the"
-        - linkText: MIT Press Essential Knowledge Series,
-          url: https://mitpress.mit.edu/books/series/mit-press-essential-knowledge-series
-        - "which everyone should know about."
+        - linkText: Saving Capitalism
+          url: https://www.nytimes.com/2015/11/15/books/review/robert-reichs-saving-capitalism.html
+        - by Robert Reich. A masterful breakdown of the "free market" and its role in an economy designed to benefit the few.
       - parts:
-        - linkText: Snowcrash
-          url: https://www.nealstephenson.com/snow-crash.html
-        - "by Neal Stephenson. A bizarre, futuristic science fiction novel set in a digital metaverse, featuring super hacker and master swordsman, Hiro Protagonist."
-      - parts:
-        - linkText: Zen & the Art of Motorcycle Maintenance
-          url: https://www.amazon.com/Zen-Art-Motorcycle-Maintenance-Inquiry/dp/0060589469
-        - "by Robert Pirsig"
+        - The
+        - linkText: Codex Seraphinianus
+          url: https://en.wikipedia.org/wiki/Codex_Seraphinianus
+        - by Luigi Serafini. I may never decide what it's actually about, which is likely the point.
 links:
   - icon: instagram
     url: https://www.instagram.com/tylerh.yes/?hl=en
   - icon: github
     url: https://github.com/thayesx
-lastUpdated: "03/27/19"
+lastUpdated: "12/5/19"
 ---

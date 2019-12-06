@@ -97,7 +97,7 @@ input, textarea, button {
 .contact {
   margin-bottom: 80px;
   .hidden {height: 0; visibility: hidden;}
-  textarea {
+  textarea, input {
     &::placeholder {
       color: $light;
       opacity: .5;
@@ -107,12 +107,15 @@ input, textarea, button {
     border: 1px solid rgba(255,255,255,.3);
     border-radius: 4px;
     width: calc(100% - 20px);
-    min-height: 100px;
     padding: 10px;
     margin: 10px 0;
     color: $light;
   }
+  textarea {
+    min-height: 100px;
+  }
   button {
+    margin-top: 20px;
     right: 0;
     @include fontSize2;
     padding: 0;
