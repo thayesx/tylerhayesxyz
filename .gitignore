@@ -2,3 +2,4 @@ _site
 scripts/dist
 .sass-cache
 .jekyll-metadata
+node_modules
